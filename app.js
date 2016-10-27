@@ -11,7 +11,7 @@ app.use(cookieParser())
 app.get('/test', function (req, res) {
     res.cookie(cookie_name , 'testValue', {domain:'vxvid.com', expire : new Date() + 9999});
 });
-app.get('/getOne', function (req, res) {
+app.get('/getOne/:vastId', function (req, res) {
 
     res.cookie(cookie_name , req.params.vastId , {
         domain: 'vxvid.com',
