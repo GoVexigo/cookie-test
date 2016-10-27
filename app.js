@@ -9,10 +9,10 @@ app.use(cors());
 app.use(cookieParser())
 
 app.get('/test', function (req, res) {
-    res.cookie(cookie_name , 'testValue', {domain:'.vxvid.com', expire : new Date() + 9999});
+    res.cookie(cookie_name , 'testValue', {domain:'vxvid.com', expire : new Date() + 9999});
 });
 app.get('/getOne', function (req, res) {
-    res.cookie(cookie_name , 'testValue', {domain:'.vxvid.com' , sameSite: false, expire : new Date() + 9999});
+    res.cookie(cookie_name , 'testValue', {domain:'vxvid.com' , sameSite: false, expire : new Date() + 9999});
     res.send('Cookie was set');
 });
 
