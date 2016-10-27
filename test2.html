@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function httpGet(theUrl)
+        {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
+            xmlHttp.withCredentials = true;
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+        }
+
+        console.log(httpGet("http://localhost:5000/getTwo"));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
